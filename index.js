@@ -1,17 +1,31 @@
 var app = require('express')();
 var express = require('express');
+var sassMiddleware = require('node-sass-middleware');
+var path = require('path');
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
 var _ = require('underscore')._;
 
+
+app.use(sassMiddleware({
+    /* Options */
+    src: __dirname + '/sass',
+    dest: path.join(__dirname, 'public'),
+    debug: true,
+    outputStyle: 'compressed',
+    prefix:  '/css'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/> 
+}));
+
 app.use(express.static('public'));
+
 
 if(!room){
 	var room = 'bingoDefault';
 }
 console.log('Server Running');
 console.log('Default Room: ' + room);
+
 
 app.get('/bingo/:id*', function(req, res){
 	var rooms = [ 
@@ -28,6 +42,10 @@ app.get('/bingo/:id*', function(req, res){
   	console.log('NO existe!');
   }
   res.sendFile(__dirname + '/bingo.html');
+});
+
+app.get('/*', function(req, res){
+	res.sendFile(__dirname + '/index.html');
 });
 
 console.log('Room: ' + room);
