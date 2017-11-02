@@ -1,4 +1,4 @@
-$columns: 17;
+$columns: 18;
 $gutterSize: 4px;
 $columns2: 4;
 
@@ -14,12 +14,58 @@ html, body{
 html, body, .stats-container {
   background-color: #000;
   color: #fff;
- } 
+ }
+div.sliding-text{
+  width:100%;
+  overflow:hidden;
+  background-color: #fff;
+  margin: 2px;
+  height: auto;
+  border: 2px solid gray;
+  padding: .5em 0;
+  line-height: 1em;
+  font-size: 3.5em;
+  font-weight: 900;
+  font-family: "Agency FB";
+  color: #000;
+  text-transform: uppercase
+}
+div.slide-right p {
+  -moz-animation: 15s slide-right;
+  -webkit-animation: 15s slide-right;
+  -o-animation: 15s slide-right;
+  animation: 15s slide-right;
+  margin:0;
+}
+div.slide-left p {
+  -moz-animation: 15s slide-left;
+  -webkit-animation: 15s slide-left;
+  -o-animation: 15s slide-left;
+  animation: 15s slide-left;
+  margin:0;
+}
+@-webkit-keyframes slide-right { from { margin-left: 100%;width: 300%; }
+  to {margin-left: 0%;width: 100%;} }
+@-moz-keyframes slide-right { from { margin-left: 100%;width: 300%; }
+  to {margin-left: 0%;width: 100%;} }
+ @-o-keyframes slide-right { from { margin-left: 100%;width: 300%; }
+  to {margin-left: 0%;width: 100%;} }
+@keyframes slide-right { from { margin-left: 100%;width: 300%; }
+  to {margin-left: 0%;width: 100%;} }
+
+@-webkit-keyframes slide-left { from {margin-left: 0%;width: 100%;}
+ to {margin-left: -100%;width: 300%;} }
+@-moz-keyframes slide-left { from {margin-left: 0%;width: 100%;}
+ to {margin-left: -100%;width: 300%;} }
+@-o-keyframes slide-left { from {margin-left: 0%;width: 100%;}
+ to {margin-left: -100%;width: 300%;} }
+@keyframes slide-left { from {margin-left: 0%;width: 100%;}
+ to {margin-left: -100%;width: 300%;} } 
 
 .stats-container{
-  height: 40%;
-  min-height: 40%;
-  padding: 15px 15px;
+  height: 35%;
+  min-height: 35%;
+  padding: 0px calc(100% / #{$columns}) 0px calc(100% / #{$columns}) !important;
  }
 
 .stats-container:after{ 
@@ -32,7 +78,7 @@ html, body, .stats-container {
   height: 100px;
   position: relative;
   line-height: 180%;
-  padding: 0 10px;
+  padding: 0px calc(100% / #{$columns}) 0px calc(100% / #{$columns}) !important;
  } 
 
 .square-container{
@@ -63,14 +109,14 @@ a{
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(202,202,202, 0.56);
     font-weight: 900;
-    font-size: 36px;
+    font-size: 4em;
    }
   .nro{
     background-color: #000;
    }
   .nroSelec{
-    background-color: #d6d906;
-    color: #000;
+    background-color: #d6d906 !important;
+    color: #000 !important;
    }
   .letra{
     background-color: #ee0875;

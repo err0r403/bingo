@@ -10,8 +10,11 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+    
+    <!-- Foundation Icons -->
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/46336/foundation-icons.css">
     <!-- Sass -->
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/css/style.css">
 
   </head>
@@ -29,526 +32,541 @@
       <div class="stats">
         <div class="stat">
           <div class="ant">Anterior:<br>
-            <h1>B3</h1>
+            <span id="ant">00</span>
           </div>
           <div class="ult">Último:<br>
-            <h1>N37</h1>
+            <span id="ult">00</span>
           </div>
         </div>
       </div>
     </div>
     <div class="tablero">
      <div class="square-container">
-      <a href="">
-        <div class="square">
-            <div class="letra">B</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">1</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">2</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nroSelec">3</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">4</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">5</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">6</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">7</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">8</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">9</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">10</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">11</div>
-        </div>
-       </a>
-      <a href="">
-        <div class="square">
-            <div class="nroSelec">12</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">13</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">14</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="nro">15</div>
-        </div>
-       </a>
-
-      <a href="">
-        <div class="square">
-            <div class="boton"><i class="step fi-social-facebook size-48"></i></div>
-        </div>
-       </a>
-    </div>
+        <a href="#" >
+          <div class="square ">
+              <h1 class="letra">B</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B1">1</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B2">2</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B3">3</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B4">4</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B5">5</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B6">6</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B7">7</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B8">8</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B9">9</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B10">10</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B11">11</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B12">12</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B13">13</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B14">14</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="B15">15</h1>
+          </div>
+         </a>
+        <a href="#">
+          <div class="square">
+              <h1 class="boton"><i class="step fi-home size-48"></i></h1>
+          </div>
+         </a>
+        <a href="#">
+          <div class="square">
+              <h1 class="boton"><i class="step fi-refresh size-48"></i></h1>
+          </div>
+         </a>
+     </div>
      <div class="square-container">
-      <a href="">
-        <div class="square">
-            <div class="letra">I</div>
-        </div>
-       </a>
+        <a href="#" >
+          <div class="square ">
+              <h1 class="letra">I</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nroSelec">16</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square ">
+              <h1 class="nro" id="I16">16</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">17</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I17">17</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">18</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I18">18</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">19</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I19">19</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">20</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I20">20</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">21</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I21">21</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">22</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I22">22</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">23</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I23">23</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">24</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I24">24</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">25</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I25">25</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nroSelec">26</div>
-        </div>
-      </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I26">26</h1>
+          </div>
+        </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">27</div>
-        </div>        
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I27">27</h1>
+          </div>        
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">28</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I28">28</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">29</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I29">29</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">30</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="I30">30</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="boton"><i class="step fi-social-twitter size-48"></i></div>
-        </div>
-       </a>
-    </div>
+        <a href="#">
+          <div class="square">
+              <h1 class="boton"><i class="step fi-previous size-48"></i></h1>
+          </div>
+         </a>
+        <a href="#">
+          <div class="square">
+              <h1 class="boton"><i class="step fi-next size-48"></i></h1>
+          </div>
+         </a>
+     </div>
      <div class="square-container">
-      <a href="">
-        <div class="square">
-            <div class="letra">N</div>
-        </div>
-       </a>
+        <a href="#" >
+          <div class="square ">
+              <h1 class="letra">N</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nroSelec">31</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square ">
+              <h1 class="nro" id="N31">31</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">32</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N32">32</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">33</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N33">33</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">34</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N34">34</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">35</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N35">35</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">36</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N36">36</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nroSelec">37</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square ">
+              <h1 class="nro" id="N37">37</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">38</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N38">38</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">39</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N39">39</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">40</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N40">40</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">41</div>
-        </div>
-       </a>
-      <a href="">
-        <div class="square">
-            <div class="nro">42</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N41">41</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N42">42</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">43</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N43">43</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">44</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N44">44</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">45</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="N45">45</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="boton">F</div>
-        </div>
-       </a>
-    </div>
+        <a href="#">
+          <div class="square">
+              <h1 class="boton"><i class="step fi-social-facebook size-48"></i></h1>
+          </div>
+         </a>
+        <a href="#">
+          <div class="square">
+              <h1 class="boton"><i class="step fi-social-twitter size-48"></i></h1>
+          </div>
+         </a>
+     </div>
      <div class="square-container">
-      <a href="">
-        <div class="square">
-            <div class="letra">G</div>
-        </div>
-       </a>
+        <a href="#" >
+          <div class="square ">
+              <h1 class="letra">G</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nroSelec">46</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square ">
+              <h1 class="nro" id="G46">46</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">47</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="G47">47</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">48</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="G48">48</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">49</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="G49">49</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">50</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="G50">50</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nroSelec">51</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square ">
+              <h1 class="nro" id="G51">51</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nroSelec">52</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square ">
+              <h1 class="nro" id="G52">52</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">53</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="G53">53</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">54</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="G54">54</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">55</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="G55">55</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">56</div>
-        </div>
-       </a>
-      <a href="">
-        <div class="square">
-            <div class="nro">57</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="G56">56</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="G57">57</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">58</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="G58">58</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">59</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="G59">59</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">60</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="G60">60</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="boton">F</div>
-        </div>
-       </a>
-    </div>
+        <a href="#">
+          <div class="square">
+              <h1 class="boton"><i class="size-48">A</i></h1>
+          </div>
+         </a>
+        <a href="#">
+          <div class="square">
+              <h1 class="boton"><i class="size-48">O</i></h1>
+          </div>
+         </a>
+
+     </div>
      <div class="square-container">
-      <a href="">
-        <div class="square">
-            <div class="letra">O</div>
-        </div>
-       </a>
+        <a href="#" >
+          <div class="square ">
+              <h1 class="letra">O</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nroSelec">61</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square ">
+              <h1 class="nro" id="O61">61</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">62</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O62">62</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">63</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O63">63</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">64</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O64">64</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">65</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O65">65</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nroSelec">66</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square ">
+              <h1 class="nro" id="O66">66</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">67</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O67">67</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">68</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O68">68</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">69</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O69">69</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">70</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O70">70</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">71</div>
-        </div>
-       </a>
-      <a href="">
-        <div class="square">
-            <div class="nro">72</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O71">71</h1>
+          </div>
+         </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O72">72</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">73</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O73">73</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">74</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O74">74</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="nro">75</div>
-        </div>
-       </a>
+        <a href="#" onclick="marcar(this)" class="tile">
+          <div class="square">
+              <h1 class="nro" id="O75">75</h1>
+          </div>
+         </a>
 
-      <a href="">
-        <div class="square">
-            <div class="boton">F</div>
-        </div>
-       </a>
-    </div> 
+        <a href="#">
+          <div class="square">
+              <h1 class="boton"><i class="size-48"></i>F</h1>
+          </div>
+         </a>
+        <a href="#">
+          <div class="square">
+              <h1 class="boton"><i class="step fi-info size-48"></i></h1>
+          </div>
+         </a>
+
+     </div>
+     <div class="sliding-text slide-right">
+       <p>En cocina quedan solo sopaipillas, $300 c/u</p>
+     </div> 
     </div>
 
     <script src="/socket.io-1.2.0.js"></script>
@@ -558,24 +576,62 @@
     <script src="/bootstrap.min.js" crossorigin="anonymous"></script>
     <script>
     function marcar(tile){
-      //$(tile).toggleClass('pressed');
       var nro = jQuery(tile).find('h1');
+      console.log("Marcar nro: " + nro);
       var socket = io();
       var path = location.pathname.split("/");
       var room = path[2];
+      console.log("Room: " + room);
       socket.emit('ultimo numero', $(nro).attr('id'));
     }
       $(function () {
+        var title = ['<p>Publica en el fb del evento usando el hashtag #PersonalEsLegal y participa por un premio!.</p>','<p>En cocina quedan solo sopaipillas, $300 c/u.</p>'];
+        var index = 0;
+
+        function change_title() {
+            var x = title[index];
+            $('.sliding-text').html(x);
+            index++;
+            if (index >= title.length) { index = 0; }
+        };
+
+        function change_left() {
+            $('div').removeClass('slide-right').addClass('slide-left');
+        }
+
+        function change_right() {
+            $('div').removeClass('slide-left').addClass('slide-right');
+            change_title();
+        }
+
+        function to_left() {
+        setInterval(change_left, 30000);
+        };
+
+        function to_right() {
+            setInterval(change_right, 30000);
+        };
+
+        to_left();
+        to_right();
         var socket = io();
         var path = location.pathname.split("/");
         var room = path[2];
+
         socket.on('connect', function() {
           console.log('Se ha conectado');
           socket.emit('join', room);
-        });        
+          console.log("Join room: " + room);
+        });   
+
+
         socket.on('ultimo numero', function(nro){
           console.log(nro);
-          $('#'+nro).parents('a').toggleClass('pressed');
+          if($('#'+nro).hasClass('nroSelec')){
+            $('#'+nro).toggleClass('nroSelec');
+          }else{
+            $('#'+nro).addClass('nroSelec');
+          }
            var ultText = $('#ult').text();
                 $('#ant').text(ultText);
                 $('#ult').text(nro);
@@ -584,7 +640,11 @@
           if (data.length !== 0) {
               $.each(data, function(data, nro) {
                 console.log(nro);
-                $('#'+nro).parents('a').addClass('pressed');
+                if($('#'+nro).hasClass('nroSelec')){
+                  $('#'+nro).toggleClass('nroSelec');
+                }else{
+                  $('#'+nro).addClass('nroSelec');
+                }
                 var ultText = $('#ult').text();
                 $('#ant').text(ultText);
                 $('#ult').text(nro);

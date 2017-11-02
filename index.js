@@ -19,27 +19,56 @@ app.use(sassMiddleware({
 
 app.use(express.static('public'));
 
-
-if(!room){
-	var room = 'bingoDefault';
+if(!rooms){
+	var rooms = [ 
+		'p',
+		'i',
+		't',
+		'o',
+		'tt',
+		'h',
+		'c'
+	];
+	console.log("SetRooms: " + rooms);
 }
+if(!room){
+	var room = 'default';
+	console.log("SetRoom: " + room);
+}
+
+if(!history){
+	var history = {};
+		history[room] = [];
+
+for (var i in rooms) {
+  val = rooms[i];
+  history[val] = [];
+  console.log("SetHistoryRooms: " + val);
+  console.log("History: " + history[val]);
+}
+
+}
+
+function setRoom(r){
+	room = r;
+	console.log("SetRoom: " + room);
+}
+
 console.log('Server Running');
-console.log('Default Room: ' + room);
+console.log('Server Default Room: ' + room);
 
 
 app.get('/bingo/:id*', function(req, res){
-	var rooms = [ 
-		'puntual',
-		'2',
-		'3'
-	];
-  console.log('Ha solicitado unirse a: ' + req.params.id);
+
+  console.log('Get - Ha solicitado unirse a: ' + req.params.id);
   if(_.contains(rooms, req.params.id)){
-  	room = req.params.id;
-  	console.log(room + ' existe!');
+  	r = req.params.id;
+  	console.log('Get - Room: ' + r + ' existe!');
+  	setRoom(r);
   }else{
-  	var room = 'bingoDefault';
-  	console.log('NO existe!');
+    r = 'bingoDefault';
+    console.log('Get - NO existe!');
+    setRoom(r);
   }
   res.sendFile(__dirname + '/bingo.html');
 });
@@ -48,33 +77,33 @@ app.get('/*', function(req, res){
 	res.sendFile(__dirname + '/index.html');
 });
 
-console.log('Room: ' + room);
-
-var history = {};
-	history[room] = [];
+console.log('Out Room: ' + room);
+console.log('Out History: ' + history)
     
 	io.sockets.on('connection', function(socket) {
-		console.log('Nueva conexión de: ' + socket);
+		console.log('Connection - Nueva conexión de: ' + socket);
 		socket.on('disconnect', function(){
-		    console.log('Conexión terminada de:' + socket.id);
+		    console.log('Connection - Conexión terminada de:' + socket.id);
 	 	});
 	    
 		socket.on('ultimo numero', function(nro){
 			io.to(room).emit('ultimo numero', nro);
 			history[room].push(nro);
-			console.log(history[room]);
+			console.log('Ult Num History[' + room + ']: ' + history[room]);
 		});
 		socket.on('join', function(room) {
-	    	console.log(socket.id + ' ha entrado a ' + room);
+	    	console.log('Join ' + socket.id + ' ha entrado a ' + room);
 	        socket.join(room);
 	        room = room;       
         	var keys = _.keys(history);
-        	console.log(history);
-        	console.log(history[room]);
+        	console.log("Join History: " + history);
+        	console.log("Join History[room]: " + history[room]);
         	if (_.contains(keys, room)) {
 				socket.emit("history", history[room]);
+				console.log('Emit history - Room: ' + room);
 			}else{
-				console.log('sin datos');
+				console.log('Join - Room: ' + room);
+				console.log('Join - sin datos');
 			}
 	    });
 	
