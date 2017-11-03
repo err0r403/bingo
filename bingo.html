@@ -24,10 +24,10 @@
         </div>
       </div>
       <div class="stats">
-        <div class="bingo">Bingo</div>
+        <div class="bingo"></div>
       </div>
       <div class="stats">
-        <div class="binguito">Binguito</div>
+        <div class="binguito"></div>
       </div>
       <div class="stats">
         <div class="stat">
@@ -124,12 +124,12 @@
          </a>
         <a href="#">
           <div class="square">
-              <h1 class="boton"><i class="step fi-home size-48"></i></h1>
+              <h1 class="boton"><i class="step fi-home"></i></h1>
           </div>
          </a>
         <a href="#">
           <div class="square">
-              <h1 class="boton"><i class="step fi-refresh size-48"></i></h1>
+              <h1 class="boton"><i class="step fi-refresh"></i></h1>
           </div>
          </a>
      </div>
@@ -232,12 +232,12 @@
 
         <a href="#">
           <div class="square">
-              <h1 class="boton"><i class="step fi-previous size-48"></i></h1>
+              <h1 class="boton"><i class="step fi-previous"></i></h1>
           </div>
          </a>
         <a href="#">
           <div class="square">
-              <h1 class="boton"><i class="step fi-next size-48"></i></h1>
+              <h1 class="boton"><i class="step fi-next"></i></h1>
           </div>
          </a>
      </div>
@@ -339,12 +339,12 @@
 
         <a href="#">
           <div class="square">
-              <h1 class="boton"><i class="step fi-social-facebook size-48"></i></h1>
+              <h1 class="boton"><i data-toggle="modal" href="#fac" class="step fi-social-facebook"></i></h1>
           </div>
          </a>
         <a href="#">
           <div class="square">
-              <h1 class="boton"><i class="step fi-social-twitter size-48"></i></h1>
+              <h1 class="boton"><i data-toggle="modal" href="#twi" class="step fi-social-twitter"></i></h1>
           </div>
          </a>
      </div>
@@ -446,12 +446,12 @@
 
         <a href="#">
           <div class="square">
-              <h1 class="boton"><i class="size-48">A</i></h1>
+              <h1 class="boton"><i data-toggle="modal" href="#aus" data class="step fi-torso-business"></i></h1>
           </div>
          </a>
         <a href="#">
           <div class="square">
-              <h1 class="boton"><i class="size-48">O</i></h1>
+              <h1 class="boton"><i data-toggle="modal" href="#org" class="step fi-torsos-all"></i></h1>
           </div>
          </a>
 
@@ -554,12 +554,12 @@
 
         <a href="#">
           <div class="square">
-              <h1 class="boton"><i class="size-48"></i>F</h1>
+              <h1 class="boton"><i data-toggle="modal" href="#fot" class="step fi-camera"></i></h1>
           </div>
          </a>
         <a href="#">
           <div class="square">
-              <h1 class="boton"><i class="step fi-info size-48"></i></h1>
+              <h1 class="boton"><i data-toggle="modal" href="#inf" class="step fi-info"></i></h1>
           </div>
          </a>
 
@@ -568,7 +568,112 @@
        <p>En cocina quedan solo sopaipillas, $300 c/u</p>
      </div> 
     </div>
-
+<!-- modal org -->
+<div id="org" class="modal modal-wide fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Organizadores</h4>
+      </div>
+      <div class="modal-body org-gif">
+        <p>Cuerpo&hellip;</p>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- modal aus -->
+<div id="aus" class="modal modal-wide fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Auspiciadores</h4>
+      </div>
+      <div class="modal-body">
+        <p>Cuerpo&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- modal inf -->
+<div id="inf" class="modal modal-wide fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Información General</h4>
+      </div>
+      <div class="modal-body">
+        <p>Cuerpo&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- modal fot -->
+<div id="fot" class="modal modal-wide fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Fotos Organizaciones</h4>
+      </div>
+      <div class="modal-body">
+        <p>Cuerpo&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- modal fac -->
+<div id="fac" class="modal modal-wide fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Evento Facebook</h4>
+      </div>
+      <div class="modal-body">
+        <p>Cuerpo&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- modal twi -->
+<div id="twi" class="modal modal-wide fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Twitter</h4>
+      </div>
+      <div class="modal-body">
+        <p>Cuerpo&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
     <script src="/socket.io-1.2.0.js"></script>
     <script src="/jquery-1.11.1.js"></script>
 
@@ -584,7 +689,15 @@
       console.log("Room: " + room);
       socket.emit('ultimo numero', $(nro).attr('id'));
     }
+
+    $(".modal-wide").on("show.bs.modal", function() {
+      var height = $(window).height() - 100;
+      $(this).find(".modal-body").css("max-height", height);
+    });
+
       $(function () {
+
+        //sliding text
         var title = ['<p>Publica en el fb del evento usando el hashtag #PersonalEsLegal y participa por un premio!.</p>','<p>En cocina quedan solo sopaipillas, $300 c/u.</p>'];
         var index = 0;
 
@@ -596,11 +709,11 @@
         };
 
         function change_left() {
-            $('div').removeClass('slide-right').addClass('slide-left');
+            $('div.main').removeClass('slide-right').addClass('slide-left');
         }
 
         function change_right() {
-            $('div').removeClass('slide-left').addClass('slide-right');
+            $('div.main').removeClass('slide-left').addClass('slide-right');
             change_title();
         }
 
@@ -614,6 +727,9 @@
 
         to_left();
         to_right();
+        //sliding text end
+
+        //socket
         var socket = io();
         var path = location.pathname.split("/");
         var room = path[2];
@@ -623,7 +739,6 @@
           socket.emit('join', room);
           console.log("Join room: " + room);
         });   
-
 
         socket.on('ultimo numero', function(nro){
           console.log(nro);
@@ -636,6 +751,7 @@
                 $('#ant').text(ultText);
                 $('#ult').text(nro);
         });
+
         socket.on("history", function(data) {
           if (data.length !== 0) {
               $.each(data, function(data, nro) {
@@ -653,6 +769,7 @@
               console.log('sin datos!!');
             }
         });
+        //socket end
       });
     </script>
   </body>

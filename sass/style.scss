@@ -1,6 +1,44 @@
+
+//Variables
 $columns: 18;
 $gutterSize: 4px;
 $columns2: 4;
+$max-breakpoint: 1025;
+$large-breakpoint: 1550;
+$wide-screen: "(min-width: #{$max-breakpoint}px)"; 
+$large-screen: "(min-width: #{$large-breakpoint}px)";
+
+
+//Functions
+@function get-vw($target) {
+  // 1 vw is equal to 1% of the viewport width
+  $vw-context: ($max-breakpoint * .01) * 1px; // 1% viewport width
+  @return ($target/$vw-context) * 0.5vw;
+}
+
+// Mixin
+@mixin vw($size) {
+  font-size: get-vw($size);
+  // Prevent font-size from getting too big
+  @media #{$wide-screen} {
+    font-size: $size;
+  }
+  @media #{$large-screen} {
+    font-size: $size*1.2;
+  }
+}
+
+
+//Css general
+.org-gif{
+    background-image:url('http://gifgifs.com/animations/animals/primates-and-monkeys/cartoon_gorilla.gif');
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: calc(100% - #{$gutterSize}) !important;
+    height: calc(100% - #{$gutterSize}) !important;
+}
 
 * {
   box-sizing: border-box
@@ -11,10 +49,19 @@ html, body{
   padding: 15px 5px;
 }
 
+.modal.modal-wide .modal-dialog {
+  width: 90%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+.modal-body p   { margin-bottom: 900px }
+
 html, body, .stats-container {
   background-color: #000;
   color: #fff;
  }
+
 div.sliding-text{
   width:100%;
   overflow:hidden;
@@ -63,8 +110,8 @@ div.slide-left p {
  to {margin-left: -100%;width: 300%;} } 
 
 .stats-container{
-  height: 35%;
-  min-height: 35%;
+  height: 38%;
+  min-height: 38%;
   padding: 0px calc(100% / #{$columns}) 0px calc(100% / #{$columns}) !important;
  }
 
@@ -95,10 +142,17 @@ div.slide-left p {
   float: left;
   position: relative;
   padding-bottom: calc(90% / #{$columns});
+  text-align: center;
  }
 a{
   color: #fff;
  
+  .nro, .letra, .boton, .nroSelec, .step{
+    font-weight: 900;
+    font-size: 4.5em; // Fallback
+    @include vw(36px);
+
+  }
   .nro, .letra, .boton, .nroSelec{
     width: calc(100% - #{$gutterSize});
     height: calc(100% - #{$gutterSize});
@@ -108,8 +162,6 @@ a{
     border-radius: 4px;
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(202,202,202, 0.56);
-    font-weight: 900;
-    font-size: 4em;
    }
   .nro{
     background-color: #000;
@@ -138,6 +190,7 @@ a{
  } 
 .stats{
   width: calc(100% / #{$columns2});
+  height: calc(90%);
   float: left;
   position: relative;
   padding-bottom: calc(60% / #{$columns2});
@@ -151,47 +204,55 @@ a{
    }
 
   .stat{
-    border-radius: 4px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(202,202,202, 0.56);
     font-weight: 900;
     font-size: 36px;
+    padding: 15px;
    }
 
   .logo{
-    background: url(https://i.imgur.com/X3Rb9HR.png) no - repeat center center;
+    background: url('/logobingo.png') no - repeat center center;
     background-size: contain;
    }
   .bingo{
     background-color: #79cc72;
-    background: url(https://i.imgur.com/KXRcUws.png) no - repeat center center;
-    background-size: 40%;
+    background: url('/bingo.jpg') no - repeat center center;
+    background-size: 65%;
    }
   .binguito{
     background-color: #a168b8;
-    background: url(https://i.imgur.com/MRFSspS.png) no-repeat center center;
-    background-size: 40%;
+    background: url('/binguito.jpg') no-repeat center center;
+    background-size: 65%;
    }
 
   .stat{
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
     .ant{
       height: calc(40%);
-     }
-      h1{
-        font-size: 2rem;
-        font-weight: 700;
+      font-weight: 700;
+      font-size: 4.5em; // Fallback
+      @include vw(28px);
+      span{
+        font-weight: 900;
+        font-size: 4.5em; // Fallback
+        @include vw(36px);
         float: right;
-       }
+      }
+     }
+
     .ult{
       height: calc(60%);
       color: #ee0875;
-     }
-      h1{
-        font-size: 4rem;
+      font-weight: 700;
+      font-size: 4.5em; // Fallback
+      @include vw(36px);
+      span{
         font-weight: 900;
+        font-size: 4.5em; // Fallback
+        @include vw(40px);
         float: right;
       }
+     }
+
      }
  }
